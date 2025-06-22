@@ -2,53 +2,52 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>تقرير الزيارة الميدانية</title>
   <style>
     body { font-family: sans-serif; background: #fff; color: #000; padding: 20px; max-width: 600px; margin: auto; direction: rtl; }
     h1 { color: #bfa046; }
-    input, textarea, select { width: 100%; padding: 10px; margin: 10px 0; }
-    label { font-weight: bold; }
-    .section { margin-top: 30px; }
+    input, textarea, select, button { width: 100%; padding: 10px; margin: 10px 0; font-size: 16px; }
+    label { font-weight: bold; display: block; margin-top: 15px; }
   </style>
 </head>
 <body>
   <h1>مركز أبوظبي العقاري</h1>
-  <form method="POST" enctype="multipart/form-data" action="mailto:youremail@example.com">
+  <form action="https://formspree.io/f/xanjpnpe" method="POST" enctype="multipart/form-data">
     <label>نوع العقار:</label>
-    <input type="text" name="property_type" required>
+    <input type="text" name="نوع العقار" required>
 
     <label>تاريخ الزيارة:</label>
-    <input type="date" name="visit_date" required>
+    <input type="date" name="تاريخ الزيارة" required>
 
-    <label>اسم المالك:</label>
-    <input type="text" name="owner_name" required>
+    <label>المالك:</label>
+    <input type="text" name="المالك" required>
 
     <label>المنطقة:</label>
-    <input type="text" name="area" required>
+    <input type="text" name="المنطقة" required>
 
     <label>الرقم المرجعي:</label>
-    <input type="text" name="ref_number">
+    <input type="text" name="الرقم المرجعي">
 
     <label>رقم العنونة:</label>
-    <input type="text" name="address_number">
+    <input type="text" name="رقم العنونة">
 
     <label>إحداثيات (Google Map):</label>
-    <input type="text" name="coordinates">
+    <input type="text" name="إحداثيات">
 
     <label>أسباب الزيارة:</label>
-    <select name="visit_reason">
+    <select name="أسباب الزيارة">
       <option value="أخرى">أخرى</option>
       <option value="استدعاء">استدعاء</option>
       <option value="تنفيذ مرسوم الهدم">تنفيذ مرسوم الهدم</option>
     </select>
 
     <label>تاريخ صدور الشهادة:</label>
-    <input type="date" name="certificate_date">
+    <input type="date" name="تاريخ صدور الشهادة">
 
     <label>حالة العقار:</label>
-    <select name="property_status">
+    <select name="حالة العقار">
       <option value="مهدوم">مهدوم</option>
       <option value="مؤجر">مؤجر</option>
       <option value="مهجور">مهجور</option>
@@ -56,20 +55,18 @@
     </select>
 
     <label>الملاحظات (إن وجدت):</label>
-    <textarea name="notes"></textarea>
+    <textarea name="الملاحظات"></textarea>
 
     <label>اسم الموظف:</label>
-    <input type="text" name="employee_name" required>
+    <input type="text" name="اسم الموظف" required>
 
-    <label>بريد المستخدم:</label>
-    <input type="email" name="user_email" required>
+    <label>البريد الإلكتروني:</label>
+    <input type="email" name="البريد الإلكتروني" required>
 
-    <label>رفع الصور التوضيحية:</label>
-    <input type="file" name="photos" accept="image/*" multiple required>
+    <label>صور توضيحية:</label>
+    <input type="file" name="صور توضيحية" accept="image/*" multiple required>
 
-    <div class="section">
-      <button type="submit">إرسال</button>
-    </div>
+    <button type="submit">إرسال</button>
   </form>
 </body>
 </html>
