@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تقرير الزيارة الميدانية</title>
+  <style>
+    body { font-family: sans-serif; background: #fff; color: #000; padding: 20px; max-width: 600px; margin: auto; direction: rtl; }
+    h1 { color: #bfa046; }
+    input, textarea, select { width: 100%; padding: 10px; margin: 10px 0; }
+    label { font-weight: bold; }
+    .section { margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <h1>مركز أبوظبي العقاري</h1>
+  <form method="POST" enctype="multipart/form-data" action="mailto:youremail@example.com">
+    <label>نوع العقار:</label>
+    <input type="text" name="property_type" required>
+
+    <label>تاريخ الزيارة:</label>
+    <input type="date" name="visit_date" required>
+
+    <label>اسم المالك:</label>
+    <input type="text" name="owner_name" required>
+
+    <label>المنطقة:</label>
+    <input type="text" name="area" required>
+
+    <label>الرقم المرجعي:</label>
+    <input type="text" name="ref_number">
+
+    <label>رقم العنونة:</label>
+    <input type="text" name="address_number">
+
+    <label>إحداثيات (Google Map):</label>
+    <input type="text" name="coordinates">
+
+    <label>أسباب الزيارة:</label>
+    <select name="visit_reason">
+      <option value="أخرى">أخرى</option>
+      <option value="استدعاء">استدعاء</option>
+      <option value="تنفيذ مرسوم الهدم">تنفيذ مرسوم الهدم</option>
+    </select>
+
+    <label>تاريخ صدور الشهادة:</label>
+    <input type="date" name="certificate_date">
+
+    <label>حالة العقار:</label>
+    <select name="property_status">
+      <option value="مهدوم">مهدوم</option>
+      <option value="مؤجر">مؤجر</option>
+      <option value="مهجور">مهجور</option>
+      <option value="مستغل">مستغل</option>
+    </select>
+
+    <label>الملاحظات (إن وجدت):</label>
+    <textarea name="notes"></textarea>
+
+    <label>اسم الموظف:</label>
+    <input type="text" name="employee_name" required>
+
+    <label>بريد المستخدم:</label>
+    <input type="email" name="user_email" required>
+
+    <label>رفع الصور التوضيحية:</label>
+    <input type="file" name="photos" accept="image/*" multiple required>
+
+    <div class="section">
+      <button type="submit">إرسال</button>
+    </div>
+  </form>
+</body>
+</html>
